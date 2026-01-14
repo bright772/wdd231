@@ -1,0 +1,2 @@
+// support course information cards
+
