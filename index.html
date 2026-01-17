@@ -8,9 +8,11 @@
     <meta name="author" content="Myeongseon Lee">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 481px)">
     <!-- <link rel="stylesheet" href="styles/small.css" media="(screen and max-width: 600px)">
     <link rel="stylesheet" href="styles/larger.css" media="(screen and min-width: 601px)"> -->
+    <!-- Use this conditional loading for legacy support or for major shifts; otherwise, use a media query inside the file. So, you could use automatic loading for small.css and then conditional loading for larger.css, and it would only change the desired elements. But, since the assignment says larger should have its own media query, you can put medium and large sizes in it. -->
+    <script src="scripts/navigation.js" defer></script>
 </head>
 <body>
     <header>
@@ -18,8 +20,8 @@
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"/>
         </svg>
 
-        <!-- <img src="baby-lamb.jpg" alt="a lamb" width="100px"> -->
-        <span style="font-size: 3em">Myeongseon's Home Page</span>
+        <img src="images/baby-lamb.jpg" alt="a lamb" width="24px">
+        <span>Myeongseon Lee</span>
         <button id="nav-button" class="hamburger" aria-label="navigation"></button>
         <!-- <span>&#9776;</span> // CSS: \2630, \00D7
         <span>&#215;</span> -->
@@ -27,38 +29,65 @@
     <nav>
         <ul>
             <li>
-                <a href="index.html">Home</a>
+                <a class="header-links" href="index.html">Home</a>
             </li>
             <li>
-                Chamber Project
+                <a class="header-links" href="index.html">Chamber Project</a>
             </li>
             <li>
-                Final Project
+                <a class="header-links" href="index.html">Final Project</a>
             </li>
         </ul>
     </nav>
     <main>
         <h1>Home</h1>
         <div class="div-row">
-            <div>
+            <div id="div-row-left">
                 <h2>About Me</h2>
-                <p class="wrap">Here's a great deal of text, a truly great amount. So great an amount that you can
-                    hardly help but wrap it around.</p>
+                <div class="bg-color-div">
+                    <p class="wrap">Here's a great deal of text, a truly great amount. So great an amount that you can hardly help but wrap it around.  It circles and circles again.  Here's a great deal of text, a truly great amount. So great an amount that you can hardly help but wrap it around.</p>
+                </div>
             </div>
 
-            <div>
+            <div id="div-row-right">
                 <h2>Student Photo</h2>
-                <img src="hobak.jpg" alt="my eolgul" width="100%">
+                <div class="bg-color-div">
+                    <!-- <img src="hobak.jpg" alt="an eolgul"> -->
+                    <img src="images/msl.jpg" alt="an eolgul">
+                </div>
             </div>
         </div>
 
-        <div>
+        <div id="div-courses">
             <h2>Web Certificate Courses</h2>
+
+            <span>
+                The total credits for course listed above is <span id="span-course-count">X</span>
+            </span>
+
+        </div>
+
+        <div id="div-icons-links">
+            <svg width="68" height="68" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M22 3.47059V20.5294C22 20.9194 21.8451 21.2935 21.5693 21.5693C21.2935 21.8451 20.9194 22 20.5294 22H3.47059C3.08056 22 2.70651 21.8451 2.43073 21.5693C2.15494 21.2935 2 20.9194 2 20.5294V3.47059C2 3.08056 2.15494 2.70651 2.43073 2.43073C2.70651 2.15494 3.08056 2 3.47059 2H20.5294C20.9194 2 21.2935 2.15494 21.5693 2.43073C21.8451 2.70651 22 3.08056 22 3.47059ZM7.88235 9.64706H4.94118V19.0588H7.88235V9.64706ZM8.14706 6.41177C8.14861 6.18929 8.10632 5.96869 8.02261 5.76255C7.93891 5.55642 7.81542 5.36879 7.65919 5.21039C7.50297 5.05198 7.31708 4.92589 7.11213 4.83933C6.90718 4.75277 6.68718 4.70742 6.46471 4.70588H6.41177C5.95934 4.70588 5.52544 4.88561 5.20552 5.20552C4.88561 5.52544 4.70588 5.95934 4.70588 6.41177C4.70588 6.86419 4.88561 7.29809 5.20552 7.61801C5.52544 7.93792 5.95934 8.11765 6.41177 8.11765C6.63426 8.12312 6.85565 8.0847 7.06328 8.00458C7.27092 7.92447 7.46074 7.80422 7.62189 7.65072C7.78304 7.49722 7.91237 7.31346 8.00248 7.10996C8.09259 6.90646 8.14172 6.6872 8.14706 6.46471V6.41177ZM19.0588 13.3412C19.0588 10.5118 17.2588 9.41177 15.4706 9.41177C14.8851 9.38245 14.3021 9.50715 13.7799 9.77345C13.2576 10.0397 12.8143 10.4383 12.4941 10.9294H12.4118V9.64706H9.64706V19.0588H12.5882V14.0529C12.5457 13.5403 12.7072 13.0315 13.0376 12.6372C13.3681 12.2429 13.8407 11.9949 14.3529 11.9471H14.4647C15.4 11.9471 16.0941 12.5353 16.0941 14.0176V19.0588H19.0353L19.0588 13.3412Z" fill="#000000"></path> </g></svg>
+            
+            &nbsp;&nbsp;
+            <a href="https://www.github.com/bright772/" target="_blank">
+                <svg width="64px" height="64px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>github [#142]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"> </path> </g> </g> </g> </g>
+                </svg>
+            </a>
+
+            &nbsp;&nbsp;
+            <a href="https://x.com/" target="_blank">
+                <svg width="62px" height="62px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2200">
+                <path d="M2.203 2.75c.832.962 40.644 53.05 88.471 115.75 93.364 122.397 109.64 143.721 478.202 626.5 42.618 55.825 101.315 132.719 130.438 170.876 29.122 38.157 53.003 69.954 53.068 70.66.117 1.268-16.163 20.104-207.397 239.964a5882090.24 5882090.24 0 0 0-380.928 438c-9.085 10.45-28.463 32.725-43.063 49.5-14.6 16.775-38.578 44.337-53.285 61.25L40.97 1806H346.789l13.373-15.25c7.355-8.388 105.154-120.1 217.331-248.25a8131902.564 8131902.564 0 0 1 262.836-300.25c32.382-36.987 59.168-67.223 59.524-67.191.356.033 109.097 141.991 241.647 315.462l241 315.402 308.305.039 308.306.038-19.876-26.25c-10.932-14.437-81.462-107.7-156.734-207.25s-156.265-206.65-179.984-238c-23.719-31.35-72.559-95.925-108.534-143.5-35.975-47.575-87.025-115.086-113.446-150.024-26.42-34.938-63.112-83.464-81.537-107.836a449689.095 449689.095 0 0 0-79.25-104.778c-25.162-33.256-45.75-60.905-45.75-61.441 0-.536 22.607-26.725 50.237-58.198C1333.529 629.796 1456.83 489.389 1476.51 467c8.944-10.175 85.219-97.025 169.5-193s171.97-195.802 194.864-221.838c22.894-26.036 42.243-48.199 42.998-49.25 1.349-1.88-1.161-1.911-151.5-1.842l-152.872.07-69.096 78.18c-64.79 73.309-370.366 418.498-418.656 472.93-12.077 13.613-22.326 24.75-22.776 24.75-.449 0-12.638-15.637-27.085-34.75-61.625-81.523-269.742-356.748-286.4-378.75-9.994-13.2-34.496-45.6-54.45-72l-52.341-69.25L632.635 1H316.663C15.827 1 .762 1.084 2.203 2.75M361 173.745c.001.735 18.165 24.529 229.587 300.755 55.568 72.6 132.026 172.5 169.907 222C798.376 746 845.401 807.425 864.995 833c19.595 25.575 84.186 109.95 143.536 187.5 59.35 77.55 160.953 210.3 225.784 295 64.831 84.7 144.945 189.418 178.03 232.706l60.155 78.705 84.857.045c75.965.039 84.795-.117 84.267-1.494-.325-.846-92.946-123.584-205.825-272.75-112.88-149.167-257.844-340.737-322.144-425.712-64.3-84.975-154.197-203.775-199.772-264-45.575-60.225-147.561-195-226.637-299.5l-143.773-190-91.236-.255c-50.18-.141-91.237.084-91.237.5" fill-rule="evenodd"/>
+                </svg>
+            </a>
         </div>
     </main>
     <footer>
-        <span>&copy; 2026 Myeongseon Lee Korea</span>
-        <span>Last Modification: 01/06/2026</span>
+        <span id="year-copy">&copy; 2026</span><span> &bull; Myeongseon Lee &bull; Korea</span>
+        <br>
+        <span>Last Modification: </span><span id="date-modify">01/06/2026</span>
     </footer>
 </body>
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="purple" class="bi bi-microsoft-teams"
