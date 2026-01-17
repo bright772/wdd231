@@ -4,7 +4,19 @@ nav>ul {
     flex-direction: row;
 }
 
-.header-links:hover {
+#menu-button {
+    display: none;
+}
+
+#menu-button.show {
+    display: none;
+}
+
+nav {
+    display: block;
+}
+
+.nav-links:hover {
     border-left: solid 3px #282828;
     border-top: solid 3px white;
 }
@@ -27,5 +39,5 @@ nav>ul {
 }
 
 h2 {
-    font-size: min(4vw, 2rem);
+    font-size: min(4vw, 1.8rem);
 }

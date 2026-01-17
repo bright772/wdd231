@@ -27,6 +27,30 @@ header img {
     grid-column: 1 / 2;
 }
 
+#menu-button {
+    font-size: 2rem;
+}
+
+#menu-button::before {
+    content: "\2630";
+}
+
+#menu-button.show {
+    display: block;
+}
+
+#menu-button.show::before {
+    content: "\00D7";
+}
+
+nav {
+    display: none;
+}
+
+nav.show { /* Just .show also works here, but is globally applicable */
+    display: block;
+}
+
 nav * {
     border: none;
     padding: 3px 0;
@@ -47,7 +71,7 @@ nav>ul>li {
     height: 2rem;
 }
 
-.header-links {
+.nav-links {
     border: solid 3px #282828;
     display: block;
     text-decoration: none;
@@ -56,11 +80,11 @@ nav>ul>li {
     align-content: center;
 }
 
-.header-links:visited {
+.nav-links:visited {
     color: inherit;
 }
 
-.header-links:hover {
+.nav-links:hover {
     background-color: #5A5A5A;
     border-left: solid 3px white;
 }
@@ -88,7 +112,7 @@ h1 {
 .div-row>div>h2+div {
     display: flex;
     background-color: #DADADA;
-    height: 250px;
+    height: 300px;
 }
 
 #div-row-left p {
@@ -111,12 +135,22 @@ h2 {
     color: white;
     text-align: center;
     font-size: 3.5vw;
-    font-size: max(7vw, 1.5rem);
+    font-size: 1.4rem; /* max(6vw, 1.4rem); */
 }
 
 #div-courses {
     height: 200px;
     text-align: center;
+}
+
+#div-buttons-courses {
+    width: 100%;
+}
+
+.button-courses {
+    width: 31%;
+    margin: 0.4rem;
+    background-color: #BABABA;
 }
 
 #div-icons-links {

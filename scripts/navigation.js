@@ -1,5 +1,9 @@
 // support responsive navigation
-const menuDrop = document.getElementById("menu-drop")
-const menuButton = document.getElementById("menu-button")
+const menuButton = document.getElementById("menu-button");
+const navDrop = document.querySelector("nav");
 
-addEventListener.
+menuButton.addEventListener("click", function () {
+    menuButton.classList.toggle("show");
+    navDrop.classList.toggle("show");
+})
+
