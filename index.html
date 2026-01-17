@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/larger.css" media="(screen and min-width: 601px)"> -->
     <!-- Use this conditional loading for legacy support or for major shifts; otherwise, use a media query inside the file. So, you could use automatic loading for small.css and then conditional loading for larger.css, and it would only change the desired elements. But, since the assignment says larger should have its own media query, you can put medium and large sizes in it. -->
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
 </head>
 <body>
     <header>
@@ -39,6 +40,7 @@
             </li>
         </ul>
     </nav>
+    <div id="nav-holder-div"></div>
     <main>
         <h1>Home</h1>
         <div class="div-row">
@@ -89,16 +91,9 @@
         </div>
     </main>
     <footer>
-        <span id="year-copy">&copy; 2026</span><span> &bull; Myeongseon Lee &bull; Korea</span>
+        <span>&copy; </span><span id="year-copy">2026/202X</span><span> &bull; Myeongseon Lee &bull; Korea</span>
         <br>
-        <span>Last Modification: </span><span id="date-modify">01/06/2026</span>
+        <span>Last Modification: </span><span id="date-modify">01/17/2026</span>
     </footer>
 </body>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="purple" class="bi bi-microsoft-teams"
-    viewBox="0 0 16 16">
-
-    <path
-        d="M.682 3.349h6.822c.377 0 .682.305.682.682v6.822a.68.68 0 0 1-.682.682H.682A.68.68 0 0 1 0 10.853V4.03c0-.377.305-.682.682-.682Zm5.206 2.596v-.72h-3.59v.72h1.357V9.66h.87V5.945z" />
-</svg>
-
 </html>

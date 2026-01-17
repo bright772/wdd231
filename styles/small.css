@@ -51,6 +51,16 @@ nav.show { /* Just .show also works here, but is globally applicable */
     display: block;
 }
 
+#nav-holder-div {
+    display: block;
+    
+    /* height: 152px; */
+}
+
+#nav-holder-div.show {
+    display: none;
+}
+
 nav * {
     border: none;
     padding: 3px 0;
