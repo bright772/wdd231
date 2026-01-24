@@ -108,10 +108,10 @@ nav>ul>li {
 }
 
 .current-page::before {
-    content: "📖 "; /* 📝 https://html-css-js.com/html/character-codes/icons/ */
+    content: "📄  "; /* 📝 https://html-css-js.com/html/character-codes/icons/ */
 }
 .non-current-page::before {
-    content: "📕 ";
+    content: "";
 }
 
 main {
@@ -163,27 +163,12 @@ h2 {
     font-size: 1.4rem; /* max(6vw, 1.4rem); */
 }
 
-#div-courses {
-    height: 200px;
-    text-align: center;
-}
-
-#div-buttons-courses {
-    width: 100%;
-}
-
-.button-courses {
-    width: 31%;
-    margin: 0.4rem;
-    background-color: #BABABA;
-}
-
-#div-icons-links {
-    text-align: center;
-}
-
 footer {
     text-align: center;
+}
+
+@media () {
+    
 }
 
 @media (prefers-color-scheme: dark) {
