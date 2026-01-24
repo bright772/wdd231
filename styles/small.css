@@ -6,12 +6,20 @@
 
 body {
     min-width: 320px;
-    font-family: Arial, sans-serif;
+    font-family: Trebuchet MS, sans-serif;
 }
 
+h1, h2 {
+    font-family: 'Times New Roman', serif;
+    font-weight: lighter;
+}
 header {
+    border: solid black 1px;
+    font-family: Garamond, serif;
+    font-style: italic;
     display: grid;
-    grid-template-columns: 24px auto 44px;
+    grid-template-columns: 70px auto 44px;
+    align-items: center;
 
     /* display: flex;
     align-items: center; */
@@ -99,6 +107,13 @@ nav>ul>li {
     border-left: solid 3px white;
 }
 
+.current-page::before {
+    content: "📖 "; /* 📝 https://html-css-js.com/html/character-codes/icons/ */
+}
+.non-current-page::before {
+    content: "📕 ";
+}
+
 main {
     padding: 0.5rem;
     display: grid;
@@ -169,4 +184,35 @@ h2 {
 
 footer {
     text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #2A2A2A;
+        color: white;
+    }
+
+    nav>ul {
+        background-color: #4d4d4d;
+    }
+
+    .nav-links {
+        border: solid 3px #a7a7a7;
+    }
+
+    .nav-links:hover {
+        background-color: #747474;
+    }
+
+    h2 {
+        background-color: #154b91;
+    }
+
+    .div-row>div>h2+div {
+        background-color: #2e405c;
+    }
+
+    .button-courses {
+        background-color: #555555;
+    }
 }

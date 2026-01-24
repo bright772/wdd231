@@ -6,6 +6,12 @@
     <title>Home Page</title>
     <meta name="description" content="BYU-Idaho WDD 231">
     <meta name="author" content="Myeongseon Lee">
+    <meta property="og:title" content="Myeongseon Lee: Lee ^ Steven English">
+    <meta property="og:description" content="Myeongseon Lee's BYU-Idaho Web Design and Development 231 Course Home page">
+    <meta property="og:image" content="https://bright772.github.io/wdd231/images/002.jpg">
+    <meta property="og:url" content="https://bright772.github.io/wdd231/index.html">
+
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 481px)">
@@ -17,11 +23,11 @@
 </head>
 <body>
     <header>
-        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1" height="1" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"/>
+        <!-- <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1" height="1" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"/> -->
         </svg>
 
-        <img src="images/baby-lamb.jpg" alt="a lamb" width="24px">
+        <img src="images/logo1.jpg" alt="a book" width="64px">
         <span>Myeongseon Lee</span>
         <button id="menu-button" aria-label="navigation"></button>
         <!-- <span>&#9776;</span> // CSS: \2630, \00D7
@@ -30,13 +36,13 @@
     <nav>
         <ul>
             <li>
-                <a class="nav-links" href="index.html">Home</a>
+                <a class="nav-links current-page" href="index.html"><span ></span>Home</a>
             </li>
             <li>
-                <a class="nav-links" href="index.html">Chamber Project</a>
+                <a class="nav-links non-current-page" href="index.html">Chamber Project</a>
             </li>
             <li>
-                <a class="nav-links" href="index.html">Final Project</a>
+                <a class="nav-links non-current-page" href="index.html">Final Project</a>
             </li>
         </ul>
     </nav>
@@ -47,7 +53,13 @@
             <div id="div-row-left">
                 <h2>About Me</h2>
                 <div class="bg-color-div">
-                    <p class="wrap">I'm Myeongseon, from Korea.<br><br>안녕하세요! <sub> (An Nyeong Ha Se Yo)</sub>  "How are you?"<br><br>I also used to go by the English name "Bright".<br><br>I am currently a student at BYU Pathway and BYU-Idaho.  The hardest thing for me has been doing it in English.  At least it's easier nowadays to translate the materials into my first language.</p>
+                    <p class="wrap">I'm Myeongseon, from Korea.<br><br><span title="This is Korean lettering.">안녕하세요!</span> <sub> (An Nyeong Ha Se Yo)</sub>  "How are you?"
+                    
+                    <br><br>I also used to go by the English name "Bright".
+                    
+                    <br><br>I am currently a student at BYU Pathway and BYU-Idaho.
+                    
+                    <br><br>The hardest thing for me has been doing it in English.  At least it's easier nowadays to translate the materials into my first language.</p>
                 </div>
             </div>
 

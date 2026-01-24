@@ -1,0 +1,18 @@
+{
+	"familyName": "name",
+	"moveInDate": "date",
+	"familySize": 0,
+	"visitedYet": true,
+	"people": [
+		{
+			"name": "name",
+			"gender": "M",
+			"birthdate": "date"
+		},
+		{
+			"name": "name",
+			"gender": "M",
+			"birthdate": "date"
+		}
+	]
+}
