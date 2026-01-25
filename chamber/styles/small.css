@@ -9,10 +9,12 @@ body {
     font-family: Trebuchet MS, sans-serif;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'Times New Roman', serif;
     font-weight: lighter;
 }
+
 header {
     border: solid black 1px;
     font-family: Garamond, serif;
@@ -55,13 +57,14 @@ nav {
     display: none;
 }
 
-nav.show { /* Just .show also works here, but is globally applicable */
+nav.show {
+    /* Just .show also works here, but is globally applicable */
     display: block;
 }
 
 #nav-holder-div {
     display: block;
-    
+
     /* height: 152px; */
 }
 
@@ -92,6 +95,7 @@ nav>ul>li {
 .nav-links {
     border: solid 3px #282828;
     display: block;
+    color: white;
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
@@ -108,8 +112,10 @@ nav>ul>li {
 }
 
 .current-page::before {
-    content: "📄  "; /* 📝 https://html-css-js.com/html/character-codes/icons/ */
+    content: "📄  ";
+    /* 📝 https://html-css-js.com/html/character-codes/icons/ */
 }
+
 .non-current-page::before {
     content: "";
 }
@@ -140,16 +146,37 @@ h1 {
     height: 300px;
 }
 
-#div-row-left p {
-    margin: 0;
-    padding: 0.5rem;
+#div-member-card-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
 }
 
-#div-row-right img {
+.div-member-card {
+    background-color: lightskyblue;
+    color: black;
+    border: solid 1px white;
+    width: 10rem;
+    height: 16rem;
+    text-align: center;
+}
+
+.div-member-card img {
+    margin: 0.5rem 0 -0.5rem 0;
+}
+
+.div-member-card p {
+    font-size: small;
+    padding: 0 1rem;
+}
+
+/* #div-row-right img {
     display: block;
     width: clamp(200px, 60%, 250px);
     margin: auto;
-}
+} */
 
 .wrap {
     white-space: normal;
@@ -160,16 +187,15 @@ h2 {
     color: white;
     text-align: center;
     font-size: 3.5vw;
-    font-size: 1.4rem; /* max(6vw, 1.4rem); */
+    font-size: 1.4rem;
+    /* max(6vw, 1.4rem); */
 }
 
 footer {
     text-align: center;
 }
 
-@media () {
-    
-}
+@media (min-width: 481px) {}
 
 @media (prefers-color-scheme: dark) {
     body {
@@ -179,6 +205,7 @@ footer {
 
     nav>ul {
         background-color: #4d4d4d;
+        color: white;
     }
 
     .nav-links {
