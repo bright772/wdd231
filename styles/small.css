@@ -1,0 +1,221 @@
+* {
+    white-space: nowrap;
+    /* this keeps text from jumping down */
+}
+
+body {
+    min-width: 320px;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Times New Roman', serif;
+    font-weight: lighter;
+}
+
+header {
+    border: solid black 1px;
+    font-family: Garamond, serif;
+    font-style: italic;
+    display: grid;
+    grid-template-columns: 70px auto 44px;
+    align-items: center;
+}
+
+header span {
+    font-size: clamp(1.5rem, 8vw, 3rem);
+    /* vw is 1% of viewport width */
+    padding: 0 5%;
+}
+
+header img {
+    grid-column: 1 / 2;
+}
+
+#menu-button {
+    font-size: 2rem;
+}
+
+#menu-button::before {
+    content: "\2630";
+    /* hamburger menu unicode */
+}
+
+#menu-button.show {
+    display: block;
+}
+
+#menu-button.show::before {
+    content: "\00D7";
+    /* X button */
+}
+
+nav {
+    display: none;
+}
+
+nav.show { /* Just .show also works for this selector, but is globally applicable */
+    display: block;
+}
+
+#nav-holder-div {
+    display: block;
+}
+
+#nav-holder-div.show {
+    display: none;
+}
+
+nav * {
+    border: none;
+    padding: 3px 0;
+}
+
+nav > ul {
+    background-color: #282828;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav > ul > li {
+    height: 2rem;
+}
+
+.nav-links {
+    border: solid 3px #282828;
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0 1rem;
+    height: 100%;
+    align-content: center;
+}
+
+.nav-links:visited {
+    color: inherit;
+}
+
+.nav-links:hover {
+    background-color: #5A5A5A;
+    border-left: solid 3px white;
+}
+
+.current-page::before {
+    content: "📖 "; /* 📝 https://html-css-js.com/html/character-codes/icons/ */
+}
+
+.non-current-page::before {
+    content: "📕 ";
+}
+
+main {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+h1 {
+    margin-top: 0.5rem;
+}
+
+.div-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+-div-row > div > h2 {
+    margin: 0px;
+}
+
+.div-row > div > h2 + div {
+    display: flex;
+    background-color: #DADADA;
+    height: 300px;
+}
+
+#div-row-left p {
+    margin: 0;
+    padding: 0.5rem;
+}
+
+#div-row-right img {
+    display: block;
+    width: clamp(200px, 60%, 250px);
+    margin: auto;
+}
+
+.wrap {
+    white-space: normal;
+}
+
+h2 {
+    background-color: #282828;
+    color: white;
+    text-align: center;
+    font-size: 3.5vw;
+    font-size: 1.4rem; /* max(6vw, 1.4rem); */
+}
+
+#div-courses {
+    height: 200px;
+    text-align: center;
+}
+
+#div-buttons-courses {
+    width: 100%;
+}
+
+.button-courses {
+    width: 31%;
+    margin: 0.4rem;
+    background-color: #BABABA;
+}
+
+#div-icons-links {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #2A2A2A;
+        color: white;
+    }
+
+    nav > ul {
+        background-color: #4d4d4d;
+        color: white;
+    }
+
+    .nav-links {
+        border: solid 3px #a7a7a7;
+        color: white;
+    }
+
+    .nav-links:visited {
+        color: inherit;
+    }
+
+    .nav-links:hover {
+        background-color: #747474;
+    }
+
+    h2 {
+        background-color: #154b91;
+    }
+
+    .div-row > div > h2 + div {
+        background-color: #2e405c;
+    }
+
+    .button-courses {
+        background-color: #555555;
+    }
+}
