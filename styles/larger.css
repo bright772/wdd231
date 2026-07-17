@@ -35,15 +35,15 @@ nav {
     gap: 0;
 }
 
-#div-row-left {
+#section-row-left {
     margin-right: 0.5rem;
 }
 
-#div-row-right {
+#section-row-right {
     margin-left: 0.5rem;
 }
 
-#div-row-right img {
+#section-row-right img {
     width: clamp(160px, 90%, 250px);
 }
 
