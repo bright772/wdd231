@@ -137,12 +137,12 @@ h1 {
     height: 300px;
 }
 
-#div-row-left p {
+#section-row-left p {
     margin: 0;
     padding: 0.5rem;
 }
 
-#div-row-right img {
+#section-row-right img {
     display: block;
     width: clamp(200px, 60%, 250px);
     margin: auto;
@@ -160,7 +160,7 @@ h2 {
     font-size: 1.4rem; /* max(6vw, 1.4rem); */
 }
 
-#div-courses {
+#section-courses {
     height: 200px;
     text-align: center;
 }
