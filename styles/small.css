@@ -127,7 +127,7 @@ h1 {
     gap: 1rem;
 }
 
--div-row > div > h2 {
+.div-row > div > h2 {
     margin: 0px;
 }
 
