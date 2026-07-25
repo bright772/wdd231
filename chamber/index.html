@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <meta name="description" content="Myeongseon Lee's BYU-Idaho WDD 231 Chamber of Commerce Home Page">
+    <meta name="author" content="Myeongseon Lee">
+    <meta property="og:title" content="Jeongeup Chamber of Commerce">
+    <meta property="og:description" content="Myeongseon Lee's BYU-Idaho Web Design and Development 231 chamber of commerce home page">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://bright772.github.io/wdd231/chamber/index.html">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="small.css">
+    <link rel="stylesheet" href="larger.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo1.jpg" alt="Jeongeup Chamber of Commerce logo" width="64px">
+        <span>Jeongeup Chamber of Commerce</span>
+        <button id="menu-button" aria-label="open navigation menu"></button>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="nav-links" href="index.html">Home</a></li>
+            <li><a class="nav-links" href="discover.html">Discover</a></li>
+            <li><a class="nav-links" href="directory.html">Directory</a></li>
+            <li><a class="nav-links" href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="hero-wrap">
+            <img src="images/hero-jeongeup.jpg" alt="View of Jeongeup city center">
+            <a class="cta-link" href="join.html">Join the Chamber</a>
+        </div>
+
+        <div class="div-row">
+            <section id="section-row-left">
+                <h2>Current Events</h2>
+                <ul>
+                    <li>Aug 2 &mdash; Chamber mixer at River Fountain</li>
+                    <li>Aug 15 &mdash; Small business grant workshop</li>
+                    <li>Sep 1 &mdash; Farm Museum harvest tour</li>
+                </ul>
+            </section>
+            <section id="section-row-right">
+                <h2>Weather</h2>
+                <div id="weather-holder">
+                    <!-- Populated by script.js; wire up a real weather API to replace the placeholder -->
+                </div>
+            </section>
+        </div>
+
+        <section id="section-spotlight">
+            <h2>Company Spotlight</h2>
+            <div id="spotlight-holder">
+                <!-- Populated by script.js: 2-3 random gold/silver members from data/members.json -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>&copy; </span><span id="year-copy">2026</span><span> &bull; Myeongseon Lee &bull; Korea</span>
+        <br>
+        <span>Last Modification: </span><span id="date-modify"></span>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
