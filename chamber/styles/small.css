@@ -411,7 +411,7 @@ footer {
 }
  
 fieldset {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     border-radius: 4px;
     padding: 1rem;
     display: flex;
@@ -470,7 +470,7 @@ input[type="submit"]:hover {
 }
  
 .membership-card {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     border-radius: 4px;
     padding: 1rem;
     background-color: #DADADA;
@@ -510,7 +510,7 @@ input[type="submit"]:hover {
 .membership-card a {
     display: inline-block;
     margin-top: 0.5rem;
-    color: #396d4f;
+    color: #234d34;
     font-weight: bold;
     text-decoration: none;
 }
