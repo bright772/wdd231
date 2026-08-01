@@ -383,11 +383,18 @@ footer {
     }
 
     /* ? */
-    fieldset, .membership-card, dialog {
+    fieldset, dialog {
         background-color: #3a3a3a;
         border-color: #777777;
         color: white;
     }
+
+    .membership-card {
+        background-color: #3a3a3a;
+        border-color: #777777;
+        color: black;
+    }
+
     input, select, textarea {
         background-color: #2A2A2A;
         color: white;
