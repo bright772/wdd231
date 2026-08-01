@@ -1,6 +1,6 @@
 
 async function getMembers() { // get the data from the JSON file
-    const response = await fetch("scripts/members.json");
+    const response = await fetch("data/members.json");
     const data = await response.json();
     return data.membersArray;
 }
