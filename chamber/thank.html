@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <meta name="description" content="Confirmation page for Jeongeup Chamber of Commerce membership applications">
+    <meta name="author" content="Myeongseon Lee">
+ 
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/thank.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/mountain-city4.jpg" alt="Jeongeup Chamber of Commerce logo" width="64px">
+        <span>Jeongeup Chamber of Commerce</span>
+        <button id="menu-button" aria-label="open navigation menu"></button>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="nav-links non-current-page" href="index.html">Home</a></li>
+            <li><a class="nav-links non-current-page" href="discover.html">Discover</a></li>
+            <li><a class="nav-links non-current-page" href="directory.html">Directory</a></li>
+            <li><a class="nav-links current-page" href="join.html">Join</a></li>
+        </ul>
+    </nav>
+ 
+    <main>
+        <h1>Thank You!</h1>
+        <p>Thank you for applying to the Jeongeup Chamber of Commerce.</p>
+        <p>We will contact you soon.</p>
+ 
+        <section id="confirmation-details">
+            <h2>Application Summary</h2>
+            <dl>
+                <dt>First Name</dt><dd id="out-first-name"></dd>
+                <dt>Last Name</dt><dd id="out-last-name"></dd>
+                <dt>E-mail Address</dt><dd id="out-e-mail"></dd>
+                <dt>Telephone Number</dt><dd id="out-telephone"></dd>
+                <dt>Business Name</dt><dd id="out-business-name"></dd>
+                <dt>Submitted</dt><dd id="out-timestamp"></dd>
+            </dl>
+        </section>
+    </main>
+ 
+    <footer>
+        <span>&copy; </span><span id="year-copy">2026</span><span> &bull; Myeongseon Lee &bull; Korea</span>
+        <br>
+        <span>Last Modification: </span><span id="date-modify"></span>
+    </footer>
+
+</body>
+</html>
+ 

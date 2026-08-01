@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber</title>
+    <meta name="description" content="Myeongseon Lee's BYU-Idaho WDD 231 Chamber of Commerce Join Page">
+    <meta name="author" content="Myeongseon Lee">
+    <meta property="og:title" content="Join the Jeongeup Chamber of Commerce">
+    <meta property="og:description" content="Apply for membership with the Jeongeup Chamber of Commerce">
+    <meta property="og:image" content="https://bright772.github.io/wdd231/chamber/images/mountain-leaves3.jpg">
+    <meta property="og:url" content="https://bright772.github.io/wdd231/chamber/join.html">
+ 
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/mountain-city4.jpg" alt="Jeongeup Chamber of Commerce logo" width="64px">
+        <span>Jeongeup Chamber of Commerce</span>
+        <button id="menu-button" aria-label="open navigation menu"></button>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="nav-links non-current-page" href="index.html">Home</a></li>
+            <li><a class="nav-links non-current-page" href="discover.html">Discover</a></li>
+            <li><a class="nav-links non-current-page" href="directory.html">Directory</a></li>
+            <li><a class="nav-links current-page" href="join.html">Join</a></li>
+        </ul>
+    </nav>
+ 
+    <main>
+        <h1>Join the Chamber</h1>
+ 
+        <div class="join-layout">
+            <form action="thank.html" method="get">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+ 
+                    <label for="first-name">First Name
+                        <input type="text" id="first-name" name="firstName" title="Your first name" autocomplete="given-name" required>
+                    </label>
+ 
+                    <label for="last-name">Last Name
+                        <input type="text" id="last-name" name="lastName" title="Your last name" autocomplete="family-name" required>
+                    </label>
+ 
+                    <label for="business-role">Business Role
+                        <input type="text" id="business-role" name="businessRole" title="Your job title" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}" placeholder="e.g. Marketing Director">
+                    </label>
+ 
+                    <label for="e-mail">E-mail Address
+                        <input type="email" id="e-mail" name="e-mail" title="Your e-mail address" autocomplete="email" placeholder="you@email.com" required>
+                    </label>
+ 
+                    <label for="telephone">Phone Number
+                        <input type="tel" id="telephone" name="telephone" title="Your telephone number" autocomplete="tel" required>
+                    </label>
+ 
+                    <label for="business-name">Business Name
+                        <input type="text" id="business-name" name="businessName" title="The name of your business or organization" autocomplete="organization" required>
+                    </label>
+ 
+                    <label for="membership-type">Membership Type
+                        <select id="membership-type" name="membershipType" title="Choose a membership type">
+                            <option value="np">NP Membership (non-profit, no fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+ 
+                    <label for="business-description">Business Description
+                        <textarea id="business-description" name="businessDescription" title="Describe your business" rows="4"></textarea>
+                    </label>
+ 
+                    <input type="hidden" id="timestamp" name="timestamp">
+ 
+                    <input type="submit" value="Submit Application">
+                </fieldset>
+            </form>
+ 
+            <div class="membership-cards">
+                <div class="membership-card">
+                    <h2>NP Tier</h2>
+                    <p>Free for non-profit organizations.</p>
+                    <a href="#" class="modal-trigger" data-modal="modal-np">Learn more</a>
+                </div>
+                <div class="membership-card">
+                    <h2>Bronze Tier</h2>
+                    <p>Entry level with directory listing.</p>
+                    <a href="#" class="modal-trigger" data-modal="modal-bronze">Learn more</a>
+                </div>
+                <div class="membership-card">
+                    <h2>Silver Tier</h2>
+                    <p>Additional visibility.</p>
+                    <a href="#" class="modal-trigger" data-modal="modal-silver">Learn more</a>
+                </div>
+                <div class="membership-card">
+                    <h2>Gold Tier</h2>
+                    <p>Full advertising and event benefits.</p>
+                    <a href="#" class="modal-trigger" data-modal="modal-gold">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </main>
+ 
+    <dialog id="modal-np">
+        <h2>NP Membership Benefits</h2>
+        <ul>
+            <li>No membership fee</li>
+            <li>Online directory listing</li>
+            <li>Invitations to events</li>
+        </ul>
+        <button class="modal-close" formmethod="dialog">Close</button>
+    </dialog>
+ 
+    <dialog id="modal-bronze">
+        <h2>Bronze Membership Benefits</h2>
+        <ul>
+            <li>NP plus:</li>
+            <li>Yearly event attendance for 1</li>
+        </ul>
+        <button class="modal-close" formmethod="dialog">Close</button>
+    </dialog>
+ 
+    <dialog id="modal-silver">
+        <h2>Silver Membership Benefits</h2>
+        <ul>
+            <li>Bronze plus:</li>
+            <li>Spotlight on home page</li>
+            <li>Chamber education events</li>
+            <li>Yearly event attendance for 2</li>
+        </ul>
+        <button class="modal-close" formmethod="dialog">Close</button>
+    </dialog>
+ 
+    <dialog id="modal-gold">
+        <h2>Gold Membership Benefits</h2>
+        <ul>
+            <li>Silver plus:</li>
+            <li>Priority spotlight on home page</li>
+            <li>Logo on home page</li>
+            <li>Annual trade fair booth</li>
+            <li>Event attendance up to 10</li>
+        </ul>
+        <button class="modal-close" formmethod="dialog">Close</button>
+    </dialog>
+ 
+    <footer>
+        <span>&copy; </span><span id="year-copy">2026</span><span> &bull; Myeongseon Lee &bull; Korea</span>
+        <br>
+        <span>Last Modification: </span><span id="date-modify"></span>
+    </footer>
+
+</body>
+</html>
+ 
