@@ -249,6 +249,12 @@ footer {
 }
 
 /**/
+/* #div-member-card-holder.list-view { */
+    /* display: none; */
+    /**/
+    /* flex-direction: column;
+} */
+
 #div-member-card-holder.list-view .div-member-card {
     width: 100%;
     display: flex;
@@ -257,15 +263,11 @@ footer {
     text-align: left;
 }
 
-#div-member-card-holder.list-view {
-    display: none;
-    /**/
-    flex-direction: column;
-}
 
-.div-member-card img {
+/* .div-member-card img { */
+/* #div-member-card-holder.list-view .div-member-card {
     display: none;
-}
+} */
 
 /**/
 .hero-wrap {
@@ -298,6 +300,7 @@ footer {
     list-style: none;
     padding-left: 0;
 }
+
 #section-events li, #section-weather li {
     padding: 0.2rem 0;
 }
@@ -330,6 +333,12 @@ footer {
         color: white;
     }
 
+    a {
+        color: rgb(145, 221, 177);
+        font-weight: bold;
+    }
+
+    /* ? */
     #menu-button {
         color: white;
     }
@@ -372,4 +381,180 @@ footer {
     .spotlight-card {
         background-color: #3A3A3A;
     }
+
+    /* ? */
+    fieldset, .membership-card, dialog {
+        background-color: #3a3a3a;
+        border-color: #777777;
+        color: white;
+    }
+    input, select, textarea {
+        background-color: #2A2A2A;
+        color: white;
+        border-color: #a7a7a7;
+    }
 }
+
+/* */
+
+.join-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+ 
+fieldset {
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+ 
+legend {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2rem;
+    padding: 0 0.4rem;
+}
+ 
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-weight: bold;
+}
+ 
+input, select, textarea {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #767676;
+    border-radius: 3px;
+    font-family: inherit;
+    white-space: normal;
+}
+ 
+input:focus, select:focus, textarea:focus {
+    outline: 3px solid #154b91;
+    outline-offset: 1px;
+}
+ 
+input[type="submit"] {
+    background-color: #282828;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+    width: fit-content;
+    align-self: flex-start;
+}
+
+input[type="submit"]:hover {
+    background-color: #5A5A5A;
+}
+
+/* these are for the join page, not directory or index or anything */
+
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+ 
+.membership-card {
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 1rem;
+    background-color: #DADADA;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: card-reveal 0.6s ease-out forwards;
+}
+
+.membership-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.65s;
+}
+ 
+@keyframes card-reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+.membership-card h2 {
+    margin: 0 0 0.5rem 0;
+}
+
+.membership-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #396d4f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.membership-card a:hover {
+    text-decoration: underline;
+}
+ 
+dialog {
+    border: none;
+    border-radius: 6px;
+    padding: 1.5rem;
+    max-width: 90vw;
+    width: 400px;
+    white-space: normal;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog h2 {
+    background: none;
+    color: inherit;
+    text-align: left;
+    padding: 0;
+    margin-top: 0;
+}
+
+dialog .modal-close {
+    background-color: #282828;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+#confirmation-details dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.4rem 1rem;
+}
+
+#confirmation-details dt {
+    font-weight: bold;
+}
+
+#confirmation-details dd {
+    margin: 0;
+    white-space: normal;
+}
+ 
