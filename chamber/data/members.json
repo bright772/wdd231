@@ -1,0 +1,60 @@
+{
+    "membersArray": [
+        {
+            "name": "The Mill",
+            "address": "12 Grain St, Jeongeup",
+            "phone": "010-5555-1234",
+            "website": "https://map.naver.com/p/search/%EC%A0%95%EC%9D%8D%20%EB%B0%A9%EC%95%97%EA%B0%84/place/17303631?searchType=place&placePath=/home?entry=pll&from=map&fromPanelNum=2&timestamp=202607312114&locale=ko&svcName=map_pcv5&searchText=%EC%A0%95%EC%9D%8D%20%EB%B0%A9%EC%95%97%EA%B0%84&lng=126.8549207&lat=35.5646829&c=15.00,0,0,0,dh",
+            "image": "images/electric-rice-mill.png",
+            "membershipLevel": "gold"
+        },
+        {
+            "name": "River Fountain",
+            "address": "5 Riverside Rd, Jeongeup",
+            "phone": "010-5555-2345",
+            "website": "https://blog.naver.com/0909sim/222295665945",
+            "image": "images/river-fountain.png",
+            "membershipLevel": "silver"
+        },
+        {
+            "name": "Scooter Park",
+            "address": "88 Reservoir Rd, Jeongeup",
+            "phone": "010-5555-3456",
+            "website": "https://www.jeongeup.go.kr/culture/index.jeongeup?menuCd=DOM_000000604005009000",
+            "image": "images/scooter-water-park.png",
+            "membershipLevel": "member"
+        },
+        {
+            "name": "Village School",
+            "address": "3 Hanok-gil, Jeongeup",
+            "phone": "010-5555-4567",
+            "website": "https://www.grandculture.net/jeongeup/toc/GC09300887",
+            "image": "images/village-school.png",
+            "membershipLevel": "silver"
+        },
+        {
+            "name": "Farm Museum",
+            "address": "21 Nonggyeong-ro, Jeongeup",
+            "phone": "010-5555-5678",
+            "website": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=ac0ab29e-6be7-4ef6-ab92-552c1cd695ab",
+            "image": "images/farm-museum.png",
+            "membershipLevel": "gold"
+        },
+        {
+            "name": "Well Park",
+            "address": "40 Umul-gil, Jeongeup",
+            "phone": "010-5555-6789",
+            "website": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=bfebeb86-bf32-494c-82f8-a98d9f265340",
+            "image": "images/well-park.png",
+            "membershipLevel": "member"
+        },
+        {
+            "name": "Peace Tree",
+            "address": "Jageun Malgogae-ro, Jeongeup",
+            "phone": "010-5555-7890",
+            "website": "https://www.newstown.co.kr/news/articleView.html?idxno=321327",
+            "image": "images/peace-tree.png",
+            "membershipLevel": "gold"
+        }
+    ]
+}
