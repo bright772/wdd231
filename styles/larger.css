@@ -1,5 +1,7 @@
 /* Note to self: must contain a media query */
 
+@media (min-width: 768px) {
+
 body {
     max-width: 1440px;
     margin: 0 auto;
@@ -13,17 +15,17 @@ nav > ul {
     display: none;
 }
 
-#menu-button.show {
+/*#menu-button.show {
     display: none;
-}
+}*/
 
 nav {
     display: block;
 }
 
-#nav-holder-div {
+/* #nav-holder-div {
     display: none;
-}
+} */
 
 .nav-links:hover {
     border-left: solid 3px #282828;
@@ -49,5 +51,25 @@ nav {
 
 h2 {
     font-size: min(4vw, 1.8rem);
+}
+
+/**/
+.div-member-card {
+    width: 30%;
+}
+
+/*  */
+.join-layout {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.join-layout form {
+    flex: 2;
+}
+
+.membership-cards {
+    flex: 1;
+}
 
 }
