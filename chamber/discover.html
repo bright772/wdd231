@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Jeongeup - Jeongeup Chamber of Commerce</title>
+    <meta name="description" content="Myeongseon Lee's BYU-Idaho WDD 231 Chamber of Commerce Discover Page">
+    <meta name="author" content="Myeongseon Lee">
+    <meta property="og:title" content="Discover Jeongeup">
+    <meta property="og:description" content="Places to visit as a family in Jeongeup">
+    <meta property="og:image" content="https://bright772.github.io/wdd231/chamber/images/mountain-leaves3.jpg">
+    <meta property="og:url" content="https://bright772.github.io/wdd231/chamber/discover.html">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/discover.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <img src="images/mountain-city4.jpg" alt="Jeongeup Chamber of Commerce logo" width="64">
+        <span>Jeongeup Chamber of Commerce</span>
+        <button id="menu-button" aria-label="open navigation menu"></button>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="nav-links non-current-page" href="index.html">Home</a></li>
+            <li><a class="nav-links current-page" href="discover.html">Discover</a></li>
+            <li><a class="nav-links non-current-page" href="directory.html">Directory</a></li>
+            <li><a class="nav-links non-current-page" href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Discover Jeongeup</h1>
+        <p>Eight family-friendly things to do around Jeongeup.</p>
+
+        <div id="visit-message">
+            <p id="visit-message-text"></p>
+            <button id="visit-message-close" aria-label="dismiss message">&times;</button>
+        </div>
+
+        <div id="discover-grid" class="discover-grid">
+        </div>
+    </main>
+
+    <dialog id="discover-modal">
+        <h2 id="discover-modal-title"></h2>
+        <img id="discover-modal-img" src="" alt="">
+        <address id="discover-modal-address"></address>
+        <p id="discover-modal-description"></p>
+        <p><a id="discover-modal-link" href="#" target="_blank" rel="noopener">Visit website</a></p>
+        <button id="discover-modal-close" class="modal-close" formmethod="dialog">Close</button>
+    </dialog>
+
+    <footer>
+        <span>&copy; </span><span id="year-copy">2026</span><span> &bull; Myeongseon Lee &bull; Korea</span>
+        <br>
+        <span>Last Modification: </span><span id="date-modify"></span>
+    </footer>
+</body>
+</html>
