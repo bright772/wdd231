@@ -1,0 +1,183 @@
+
+#visit-message {
+    background-color: #DADADA;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    white-space: normal;
+}
+
+#visit-message p {
+    margin: 0;
+}
+
+#visit-message button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+    #visit-message {
+        background-color: #3a3a3a;
+        border-color: #777777;
+    }
+}
+
+.discover-card {
+    background-color: white;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-card h2 {
+    font-size: 1.1rem;
+    margin: 0 0 0.4rem 0;
+}
+
+.discover-card figure {
+    margin: 0 0 0.5rem 0;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.discover-card figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.discover-card address {
+    font-style: normal;
+    font-size: 0.85rem;
+    color: #555555;
+    margin-bottom: 0.4rem;
+}
+
+.discover-card p {
+    flex-grow: 1;
+    margin: 0 0 0.6rem 0;
+}
+
+.discover-card button {
+    align-self: flex-start;
+    background-color: #282828;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.discover-card button:hover {
+    background-color: #5A5A5A;
+}
+
+@media (prefers-color-scheme: dark) {
+    .discover-card { background-color: #3a3a3a; }
+    .discover-card address { color: #bbbbbb; }
+}
+
+@media (min-width: 641px) {
+    .discover-card figure img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .discover-card figure img:hover {
+        transform: scale(1.06);
+        filter: brightness(1.05);
+    }
+}
+
+/* this grid is populated in the .js file; the 
+names are defined below */
+.discover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "c1"
+        "c2"
+        "c3"
+        "c4"
+        "c5"
+        "c6"
+        "c7"
+        "c8";
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "c1 c1"
+            "c2 c3"
+            "c4 c5"
+            "c6 c7"
+            "c8 c8";
+    }
+}
+
+/* this is called "bento" layout or "dosirak" in Korea */
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "c1 c1 c2 c3"
+            "c1 c1 c4 c5"
+            "c6 c7 c8 c5";
+        gap: 1.25rem;
+    }
+
+    .discover-grid .discover-card {
+        height: 100%;
+    }
+
+    /* c1 and c5 images were normal-sized, but this makes them fill 
+    more vertically: "flex-shrink: 0 keeps the column layout below 
+    (address/p/button) from squeezing the image back down to fit." */
+    .discover-grid .discover-card:nth-of-type(1) figure img,
+    .discover-grid .discover-card:nth-of-type(5) figure img {
+        height: 500px; /* base 200px * 2.5 */
+        flex-shrink: 0;
+    }
+}
+
+/* makes the grid areas work */
+.discover-card:nth-of-type(1) {grid-area: c1;}
+.discover-card:nth-of-type(2) {grid-area: c2;}
+.discover-card:nth-of-type(3) {grid-area: c3;}
+.discover-card:nth-of-type(4) {grid-area: c4;}
+.discover-card:nth-of-type(5) {grid-area: c5;}
+.discover-card:nth-of-type(6) {grid-area: c6;}
+.discover-card:nth-of-type(7) {grid-area: c7;}
+.discover-card:nth-of-type(8) {grid-area: c8;}
+
+/* it would be nice to close these with clicking outside the box, too... */
+#discover-modal address {
+    font-style: normal;
+    margin: 0.5rem 0;
+}
+
+#discover-modal img {
+    width: 100%;
+    max-width: 280px;
+    display: block;
+    margin: 0 auto 0.75rem;
+    border-radius: 4px;
+}
